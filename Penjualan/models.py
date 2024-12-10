@@ -7,7 +7,7 @@ class NotaPenjualan(models.Model):
     no_nota_jual = models.CharField(max_length=200,blank=True,null=True)
     no_SJ_keluar = models.CharField(max_length=200,blank=True,null=True,default='belum ada')
     jenis_penjualan = models.CharField(max_length=200,blank=True,null=True,default='offline',choices=c.choice_jenis_penjualan) #penjualan offline/power/tokopedia/blibli/shoppee
-    jenis_faktur = models.CharField(max_length=200,blank=True,null=True,default='tanpa faktur',choices=c.choice_faktur) #tanpa faktur, pakai faktur, request gunggung
+    jenis_faktur = models.CharField(max_length=200,blank=True,null=True,default='tanpa faktur',choices=c.choice_faktur) #faktur tidak print, print faktur, online request gunggung, offline request gunggung - denda 2% 
     nilai_nota_jual = models.IntegerField(null=True,blank=True,default=0)
     piutang_standing = models.IntegerField(null=True,blank=True,default=0)
     kantor_cabang = models.CharField(max_length=200,blank=True,null=True,choices=c.choice_kantor)

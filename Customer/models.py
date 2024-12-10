@@ -117,6 +117,9 @@ class DataPotensiCustomer(models.Model):
     urgency_outlet = models.CharField(max_length=200,blank=True,null=True,choices=c.choice_urgency)
         #nilai 0 = tidak potensi (baik karena pernah macet ataupun lain sebagainya)
         #nilai 1 = jika outlet ini berpotensi
+        #nilai 2 = jika outlet sudah masuk rute
+        #nilai 3 = jika outlet ini potensi tapi bukan pemain oli (toko ban dan aki)
+        #nilai 4 = jika ini outlet dari sales hunter pertamina ada dms tapi tidak ada di kita
 
 class DailyRegisteredCustomerReport(models.Model):
 ####Ini adalah Data yang Time Series dan bergerak dari Outlet ####
