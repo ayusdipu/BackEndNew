@@ -42,7 +42,7 @@ choice_tipe_outlet = [
     ('bengkel','bengkel'),
     ('spbu','spbu'),
     ('bengkel own channel','bengkel own channel'),
-    ('industry','industry'),
+    ('industri','industri'),
     ('KAM','KAM'),
     ('atpm','atpm')
 ]
@@ -347,4 +347,9 @@ choice_produsen = [
 choice_jenis = [
     ('Fast Moving','Fast Moving'),
     ('Slow Moving','Slow Moving')
+]
+
+choice_debit_kredit = [
+    ('debit','debit'),
+    ('kredit','kredit')
 ]
