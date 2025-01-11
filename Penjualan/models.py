@@ -1,4 +1,5 @@
 from django.db import models
+from BackEndNew import choice as c
 
 # Create your models here.
 class NotaPenjualan(models.Model):
@@ -31,4 +32,4 @@ class DetailPenjualan(models.Model):
     harga_jual_pcs = models.IntegerField(blank=True,null=True)
     discount_produk = models.FloatField(blank=True,null=True)
     subtotal_vol = models.FloatField(blank=True,null=True)
-    tanggal_nota = models.DateField(auto_now=False,blank=True,null=True,default=now)
+    tanggal_nota = models.DateField(auto_now=False,blank=True,null=True)

@@ -29,7 +29,7 @@ class Produk(models.Model):
     kategori_produk = models.CharField(max_length=200,blank=True,null=True,choices=c.choice_kategori) #ini adalah kategori produk seperti Ban, Oli, Aki, Busi Sparepart
     klasifikasi_produk = models.CharField(max_length=200,blank=True,null=True,choices=c.choice_klasifikasi) #ini adalah klasifikasi produk untuk Retail (dijual di toko toko) atau untuk industry (dijual langsung ke pabrik/end user)
     spek_produk = models.CharField(max_length=200,blank=True,null=True) #ini adalah spek teknis produk seperti sae/size ban/spek lain
-    produsen_produk = models.CharField(max_length=200,blank=True,null=True,choice=c.choice_produsen) #ini adalah perusahaan utama produsen merek ini seperti Pertamina/Exxon/Shell/AHM
+    produsen_produk = models.CharField(max_length=200,blank=True,null=True,choices=c.choice_produsen) #ini adalah perusahaan utama produsen merek ini seperti Pertamina/Exxon/Shell/AHM
     jenis_produk = models.CharField(max_length=200,blank=True,null=True,choices=c.choice_jenis) #ini adalah penggolongan produk ke fast_moving/slow_moving
     #Kepentingan Internal Applikasi
     timestamp = models.DateTimeField(auto_now=True) #ini adalah waktu data ini dibuat atau diupdate

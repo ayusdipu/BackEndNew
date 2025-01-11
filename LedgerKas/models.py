@@ -1,4 +1,5 @@
 from django.db import models
+from BackEndNew import choice as c
 
 # Create your models here.
 class Kas(models.Model):

@@ -58,7 +58,7 @@ class RegisteredCustomer(models.Model):
     tipe_bayar = models.CharField(max_length=200,blank=True,null=True) #ini adalah tipe bayar outlet: Transfer, Tunai, BG, Jasa
     status_outlet = models.CharField(max_length=200,blank=True,null=True) #ini adalah status di outlet: Normal, Waspada, BlackList. BlackList berarti wajib cash
     hari_kebiasaan_belanja = models.CharField(max_length=200,blank=True,null=True) #ini adalah informasi biasanya outlet belanja di hari apa? Kita wajib wa penawaran 1 hari sebelumnya
-    audio_interview_outlet = models.FileField(upload_to='audio/') #ini adalah data rekaman interview di outlet
+    audio_interview_outlet = models.FileField(upload_to='audio/',null=True,blank=True) #ini adalah data rekaman interview di outlet
     
 ####Data Internal Perusahaan Ke Outlet:#####
     cluster_outlet = models.CharField(max_length=200,blank=True,null=True,choices=c.choice_cluster_outlet) #ini adalah cluster tempat kita kerja

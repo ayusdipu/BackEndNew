@@ -30,5 +30,5 @@ class DetailPembelian(models.Model):
     divisi_kantor = models.CharField(max_length=200,blank=True,null=True)
     perusahaan_kantor = models.CharField(max_length=200,blank=True,null=True)
     supplier = models.CharField(max_length=200,blank=True,null=True)
-    tanggal_nota_beli = models.DateField(auto_now=False,blank=True,null=True,default=now)
+    tanggal_nota_beli = models.DateField(auto_now=False,blank=True,null=True)
     

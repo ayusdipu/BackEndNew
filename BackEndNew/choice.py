@@ -228,7 +228,7 @@ choice_merek = [
     ('Sebana','Sebana'),('Silinap','Silinap'),('Steelo','Steelo'),('Termo','Termo'),('MPX','MPX'),
     ('Federal','Federal'),('Mobil','Mobil'),('SPX','SPX'),('Advance','Advance'),('Helix','Helix'),
     ('Evalube','Evalube'),('Idemitsu','Idemitsu'),('Top1','Top1'),('Rimula','Rimula'),('Castrol','Castrol'),
-    ('Orange','Orange'),('Jumbo','Jumbo'),('Ban AHM'),('Aki Yuasa'),('Aki GS'),('Agip','Agip'),
+    ('Orange','Orange'),('Jumbo','Jumbo'),('Ban AHM', 'Ban AHM'),('Aki Yuasa', 'Aki Yuasa'),('Aki GS','Aki GS'),('Agip','Agip'),
     ('Repsol','Repsol'),('Yamalube','Yamalube'),('Ban IRC','Ban IRC'),('Busi NGK','Busi NGK'),
     ('Megacool','Megacool'),('Busi Champion','Busi Champion'),('Motul','Motul'),('Unnoco','Unnoco'),
     ('Treebond','Treebond'),('Ban Kingland','Ban Kingland'),('TMO','TMO'),('Fortag','Fortag'),
@@ -333,6 +333,72 @@ choice_klasifikasi = [
     ('Retail','Retail'),
     ('Industri','Industri')
 ]
+
+
+choice_user = [
+    ('2W','2W'),
+    ('4W','4W'),
+    ('6W','6W'),
+    ('Industrial','Industrial')
+]
+
+choice_urgency = [
+    ('2W','2W'),
+    ('4W','4W'),
+    ('6W','6W'),
+    ('Industrial','Industrial')
+]
+
+choice_jenis_penjualan = [
+    ('2W','2W'),
+    ('4W','4W'),
+    ('6W','6W'),
+    ('Industrial','Industrial')
+]
+choice_jenis_penjualan = [
+    ('2W','2W'),
+    ('4W','4W'),
+    ('6W','6W'),
+    ('Industrial','Industrial')
+]
+choice_faktur = [
+    ('2W','2W'),
+    ('4W','4W'),
+    ('6W','6W'),
+    ('Industrial','Industrial')
+]
+choice_kantor = [
+    ('2W','2W'),
+    ('4W','4W'),
+    ('6W','6W'),
+    ('Industrial','Industrial')
+]
+
+choice_nama_salesman = [
+    ('Supervisor Cikebu','Supervisor Cikebu'),
+    ('Supervisor Babawopa','Supervisor Babawopa'),
+    ('Supervisor Temapur','Supervisor Temapur'),
+    ('Supervisor DIY','Supervisor DIY'),
+    ('Sales Cilacap Barat','Sales Cilacap Barat'),
+    ('Sales Cilacap Timur','Sales Cilacap Timur'),
+    ('Sales Kebumen ','Sales Kebumen'),
+    ('Sales Wonosobo','Sales Wonosobo'),
+    (f'Sales Banjarnegara Purbalingga','Sales Banjarnegara Purbalingga'),
+    ('Sales Banyumas','Sales Banyumas'),
+    ('Sales Magelang','Sales Magelang'),
+    ('Sales Purworejo','Sales Purworejo'),
+    ('Sales Jogja Barat Daya','Sales Jogja Barat Daya'),
+    ('Sales Jogja Barat Laut','Sales Jogja Barat Laut'),
+    ('Sales Jogja Tenggara','Sales Jogja Tenggara'),
+    ('Sales Jogja Timur Laut','Sales Jogja Timur Laut'),
+    ('Kantor DIY','Kantor DIY'),
+    ('Kantor Cikebu','Kantor Cikebu'),
+    ('Kantor Babawopa','Kantor Babawopa'),
+    ('Kantor Temapur','Kantor Temapur'),
+    ('Sales Industry Barat','Sales Industry Barat'),
+    ('Sales Industry Timur','Sales Industry Timur'),
+    ('Sales Industry Tengah','Sales Industry Tengah'),
+    ('Sales Klaten','Sales Klaten') ] 
 
 choice_produsen = [
     ('Pertamina', 'Pertamina'), ('Exxon Federal', 'Exxon Federal'), ('Honda AHM', 'Honda AHM'), 

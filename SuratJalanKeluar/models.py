@@ -22,7 +22,7 @@ class DetailSJKeluar(models.Model):
     no_SJ_keluar = models.CharField(max_length=200,blank=True,null=True)
     harga_beli_produk = models.IntegerField(blank=True,null=True) #menjadi weighted lagi jika dari beberapa lokasi
 
- class DetailLokasiKeluarProduk(models.Model):
+class DetailLokasiKeluarProduk(models.Model):
     no_nota_keluar = models.CharField(max_length=200,blank=True,null=True)
     no_SJ_keluar = models.CharField(max_length=200,blank=True,null=True)
     kode_keluar_produk = models.CharField(max_length=200,blank=True,null=True)

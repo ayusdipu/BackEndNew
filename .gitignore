@@ -1,0 +1,6 @@
+venv/
+.codegpt
+img/
+staticfiles/
+#Database
+.sqlite
