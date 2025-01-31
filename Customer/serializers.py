@@ -28,7 +28,8 @@ class RegisteredCustomerSerializer(serializers.ModelSerializer):
             'provinsi_outlet',
             'nama_salesman',
             'cluster_outlet',
-            'rute_kunjungan'
+            'rute_kunjungan',
+            'nama_pemilik'
         )
 
 

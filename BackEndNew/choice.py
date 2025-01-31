@@ -350,28 +350,27 @@ choice_urgency = [
 ]
 
 choice_jenis_penjualan = [
-    ('2W','2W'),
-    ('4W','4W'),
-    ('6W','6W'),
-    ('Industrial','Industrial')
+    ('Purchase Order','Purchase Order'),
+    ('Tokopedia','Tokopedia'),
+    ('Blibli','Blibli'),
+    ('Power','Power')
 ]
-choice_jenis_penjualan = [
-    ('2W','2W'),
-    ('4W','4W'),
-    ('6W','6W'),
-    ('Industrial','Industrial')
-]
+
 choice_faktur = [
-    ('2W','2W'),
-    ('4W','4W'),
-    ('6W','6W'),
-    ('Industrial','Industrial')
+    ('Print Faktur','Print Faktur'),
+    ('Faktur tidak Print','Faktur tidak Print'),
+    ('Gunggung','Gunggung'),
+    ('Offline Req Gunggung','Offline Req Gunggung')
 ]
 choice_kantor = [
-    ('2W','2W'),
-    ('4W','4W'),
-    ('6W','6W'),
-    ('Industrial','Industrial')
+    ('Cilacap','Cilacap'),
+    ('Jogja','Jogja'),
+    ('Purwokerto','Purwokerto'),
+    ('Magelang','Magelang'),
+    ('Wonosobo','Wonosobo'),
+    ('Klaten','Klaten'),
+    ('Kebumen','Kebumen'),
+    ('Purworejo','Purworejo')
 ]
 
 choice_nama_salesman = [
