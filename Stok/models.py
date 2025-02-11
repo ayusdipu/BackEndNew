@@ -1,18 +1,35 @@
 from django.db import models
 
 # Create your models here.
-class Stok(models.Model):
+class StokUtama(models.Model):
     # Buat halaman untuk menginput real stok di gudang. Setelah submit nanti ada halaman yang hanya menampilkan produk yang hasil opname sengketa, jika diklik menampilkan kartu stoknya
     nama_produk = models.CharField(max_length=200,blank=True,null=True)
     kode_produk = models.CharField(max_length=200,blank=True,null=True)
     jumlah_barang = models.IntegerField(null=False, default=0)
     gudang_cabang = models.CharField(max_length=200,blank=True,null=True)
+    detail_lokasi = models.CharField(max_length=200,blank=True,null=True)
+    harga_beli_weighted = models.IntegerField(null=False, default=0)
     divisi_kantor = models.CharField(max_length=200,blank=True,null=True)
     perusahaan_kantor = models.CharField(max_length=200,blank=True,null=True)
-    opname_id = models.CharField(max_length=200,blank=True,null=True)
-    hasil_opname = models.BooleanField(default=True) #hasil opname sesuai atau tidak, default sesuai
-    nominal_selisih = models.IntegerField(null=False, default=0) #perbandingan stok buku (SJMasuk-SJKeluar) dengan opname fisik di gudang
     timestamp = models.DateTimeField(auto_now=False,null=True,blank=True)
+
+class KartuStok(models.Model):
+    nama_produk = models.CharField(max_length=200,blank=True,null=True)
+    kode_produk = models.CharField(max_length=200,blank=True,null=True)
+    id_ks_transaksi = models.CharField(max_length=200,blank=True,null=True) #akan diambil dari id detail sjmasuk/keluar
+    id_sj_transaksi = models.CharField(max_length=200,blank=True,null=True)
+    jenis_transaksi = models.CharField(max_length=200,blank=True,null=True)
+    detail_lokasi = models.CharField(max_length=200,blank=True,null=True)
+    gudang_cabang = models.CharField(max_length=200,blank=True,null=True)
+    jumlah_transaksi = models.IntegerField(null=False, default=0)
+    estimasi_harga_beli = models.IntegerField(null=False, default=0)
+    stok_awal = models.IntegerField(null=False,default=0)
+    stok_akhir = models.IntegerField(null=False,default=0)
+    timestamp = models.DateTimeField(auto_now=False,null=True,blank=True)
+    keterangan = models.CharField(max_length=200,blank=True,null=True)
+    divisi_kantor = models.CharField(max_length=200,blank=True,null=True)
+    perusahaan_kantor = models.CharField(max_length=200,blank=True,null=True)
+
 
 class StokTransit(models.Model):
     #Ini adalah stok extra diluar SJ Masuk - SJ Keluar karena barang masih on transit
@@ -28,6 +45,22 @@ class StokTransit(models.Model):
     gudang_cabang = models.CharField(max_length=200,blank=True,null=True)
     divisi_kantor = models.CharField(max_length=200,blank=True,null=True)
     perusahaan_kantor = models.CharField(max_length=200,blank=True,null=True)
+
+class AuditStok(models.Model):
+    id_audit_stok = models.CharField(max_length=200,blank=True,null=True)
+    nama_produk = models.CharField(max_length=200,blank=True,null=True)
+    kode_produk = models.CharField(max_length=200,blank=True,null=True)
+    detail_lokasi = models.CharField(max_length=200,blank=True,null=True)
+    stok_fisik_teraudit = models.IntegerField(null=False, default=0)
+    stok_utama_buku = models.IntegerField(null=False, default=0)
+    selisih = models.IntegerField(null=False, default=0)
+    keterangan = models.CharField(max_length=200, blank=True,null=True)
+    gudang_cabang = models.CharField(max_length=200, blank=True,null=True)
+    jumlah_barang = models.IntegerField(null=False, default=0)
+    divisi_kantor = models.CharField(max_length=200,blank=True,null=True)
+    perusahaan_kantor = models.CharField(max_length=200,blank=True,null=True)
+    timestamp = models.DateTimeField(auto_now=False,blank=True,null=True)
+
 
 
 class LokasiStok(models.Model):

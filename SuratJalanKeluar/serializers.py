@@ -11,7 +11,7 @@ class SJKeluarSerializer(serializers.ModelSerializer):
             'no_SJ_keluar',
             'no_kendaraan',
             'nama_pengirim',
-            'tanggal_kirim',
+            'timestamp',
             'gudang_awal',
             'tujuan_kirim',
             'jenis_sj_keluar',
@@ -29,6 +29,8 @@ class DetailSJKeluarSerializer(serializers.ModelSerializer):
             'kemasan_produk',
             'no_nota_keluar',
             'no_SJ_keluar',
+            'id_detailSJK',
+            'tujuan_kirim',
             'harga_beli_produk',
         ]
 

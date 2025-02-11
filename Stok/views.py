@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 from Stok.serializers import StokSerializer, StokTransitSerializer, LokasiStokSerializer
-from Stok.models import Stok, StokTransit, LokasiStok
+from Stok.models import StokUtama, StokTransit, LokasiStok
 # Create your views here.
 
 class StokView(viewsets.ModelViewSet):
-    queryset = Stok.objects.all()
+    queryset = StokUtama.objects.all()
     serializer_class = StokSerializer
 
 class StokTransitView(viewsets.ModelViewSet):

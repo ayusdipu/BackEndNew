@@ -6,10 +6,10 @@ class SJKeluar(models.Model):
     no_SJ_keluar = models.CharField(max_length=200,blank=True,null=True)
     no_kendaraan = models.CharField(max_length=200,blank=True,null=True)
     nama_pengirim = models.CharField(max_length=200,blank=True,null=True)
-    tanggal_kirim = models.DateTimeField(auto_now=False,blank=True,null=True)
+    timestamp = models.DateTimeField(auto_now=False,blank=True,null=True)
     gudang_awal = models.CharField(max_length=200,blank=True,null=True)
     tujuan_kirim = models.CharField(max_length=200,blank=True,null=True)
-    jenis_sj_keluar = models.CharField(max_length=200,blank=True,null=True)
+    jenis_sj_keluar = models.CharField(max_length=200,blank=True,null=True) #mutasi/penjualan/retur beli
     status_kiriman = models.CharField(max_length=200,blank=True,null=True, default='belum sampai')
     modal_SJ_keluar = models.IntegerField(blank=True,null=True) #menotalkan weighted average modal sebuah nota
 
@@ -20,7 +20,11 @@ class DetailSJKeluar(models.Model):
     kemasan_produk = models.CharField(max_length=200,blank=True,null=True)
     no_nota_keluar = models.CharField(max_length=200,blank=True,null=True)
     no_SJ_keluar = models.CharField(max_length=200,blank=True,null=True)
+    id_detailSJK = models.CharField(max_length=200,blank=True,null=True)
+    tujuan_kirim = models.CharField(max_length=200,blank=True,null=True)
+    jenis_sj_keluar = models.CharField(max_length=200,blank=True,null=True)
     harga_beli_produk = models.IntegerField(blank=True,null=True) #menjadi weighted lagi jika dari beberapa lokasi
+    timestamp = models.DateTimeField(auto_now=False,blank=True,null=True)
 
 class DetailLokasiKeluarProduk(models.Model):
     no_nota_keluar = models.CharField(max_length=200,blank=True,null=True)

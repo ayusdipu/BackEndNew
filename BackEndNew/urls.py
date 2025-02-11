@@ -54,8 +54,8 @@ router.register('detailpenjualan',jual_views.DetailPenjualanView)
 router.register('produk',p_views.ProdukView)
 router.register('produkpromotion',p_views.ProdukPromotionView)
 #Salesman
-router.register('tugassalesman',sales_views.TugasSalesmanView)
-router.register('targetsalesman',sales_views.TargetSalesmanView)
+router.register('salesman',sales_views.SalesmanView)
+router.register('catatansalesman',sales_views.CatatanSalesmanView)
 #Stok
 router.register('stok',stok_views.StokView)
 router.register('stoktransit',stok_views.StokTransitView)

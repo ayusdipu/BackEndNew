@@ -7,21 +7,25 @@ class SJMasuk(models.Model):
     no_kendaraan = models.CharField(max_length=200,blank=True,null=True) # no kendaraan yang membawa kiriman
     nama_pembawa = models.CharField(max_length=200,blank=True,null=True) # nama supir yang membawa produk
     asal_kiriman = models.CharField(max_length=200,blank=True,null=True) # asal perusahaan atau tempat barang ini dikirim dari
-    waktu_masuk = models.DateTimeField(auto_now=False,blank=True,null=True)
+    timestamp = models.DateTimeField(auto_now=False,blank=True,null=True)
     gudang_cabang = models.CharField(max_length=200,blank=True,null=True)
     nama_penerima = models.CharField(max_length=200,blank=True,null=True)
-    jenis_sj_masuk = models.CharField(max_length=200,blank=True,null=True)
+    jenis_sj_masuk = models.CharField(max_length=200,blank=True,null=True)#Pembelian/mutasi/retur jual
     modal_SJ_masuk = models.IntegerField(null=True,blank=True) #total nilai nota pembelian
 
 
 class DetailSJMasuk(models.Model):
+    id_detailSJM = models.CharField(max_length=200,blank=True,null=True)
     no_SJ_masuk = models.CharField(max_length=200,blank=True,null=True)
     no_nota_masuk = models.CharField(max_length=200,blank=True,null=True)
     nama_produk = models.CharField(max_length=200,blank=True,null=True)
     kode_produk = models.CharField(max_length=200,blank=True,null=True)
     jumlah_order = models.IntegerField(blank=True,null=True)
     kemasan_produk = models.CharField(max_length=200,blank=True,null=True)
+    asal_kiriman = models.CharField(max_length=200,blank=True,null=True) #asal perusahaan atau tempat barang ini dikirim
+    jenis_sj_masuk = models.CharField(max_length=200,blank=True,null=True)
     harga_beli_pcs = models.IntegerField(null=True,blank=True)
+    timestamp = models.DateTimeField(auto_now=False,blank=True,null=True)
     
 
 class DetailLokasiMasukProduk(models.Model):

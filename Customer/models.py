@@ -66,6 +66,7 @@ class RegisteredCustomer(models.Model):
     perusahaan_kantor = models.CharField(max_length=200,blank=True,null=True,choices=c.choice_perusahaan_kantor) #ini adalah nama PT yang menggunakan applikasi ini, pertamina dengan gelora dan non pertamina dengan portalindo atau lain
     nama_salesman = models.CharField(max_length=200,blank=True,null=True) #ini adalah nama salesman yang menghandle outlet ini
     rute_kunjungan = models.CharField(max_length=200,blank=True,null=True,default='belum ada',choices=c.choice_rute_kunjungan) #ini adalah jadwal rute kunjungan sales yang menghandle outlet ini
+    frequency_kunjungan = models.CharField(max_length=200,blank=True,null=True,default='belum ada',choices=c.choice_rute_kunjungan) #ini adalah f1, f2 kunjungan sales yang menghandle outlet ini
     timestamp = models.DateTimeField(auto_now=True) #ini adalah data waktu kapan data ini terakhir di update
     catatan_outlet = models.CharField(max_length=200,blank=True,null=True) #ini adalah catatan di outlet oleh manager terkait konsumen ini
     loyalty_level = models.IntegerField(null=True,blank=True) #ini adalah level loyalitas outlet kepada kita, dinilai dari 6 bulan terakhir transaksi 1 hati setiap tidak bolong

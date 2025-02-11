@@ -1,9 +1,9 @@
 from rest_framework import serializers
-from Stok.models import Stok, StokTransit, LokasiStok
+from Stok.models import StokUtama, StokTransit, LokasiStok
 
 class StokSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Stok
+        model = StokUtama
         fields = (
             'nama_produk',
             'kode_produk',
