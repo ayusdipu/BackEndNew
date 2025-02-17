@@ -9,5 +9,6 @@ class DriverSerializer(serializers.ModelSerializer):
             'nama_supir',
             'no_telepon_supir',
             'jenis_kendaraan',
-            'merek_kendaraan'
+            'merek_kendaraan',
+            'status_kendaraan'
         )
