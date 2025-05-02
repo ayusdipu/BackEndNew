@@ -19,6 +19,7 @@ class DetailSJKeluar(models.Model):
     jumlah_order = models.IntegerField(blank=True,null=True)
     kemasan_produk = models.CharField(max_length=200,blank=True,null=True)
     no_nota_keluar = models.CharField(max_length=200,blank=True,null=True)
+    id_detail_nota_keluar = models.CharField(max_length=200,blank=True,null=True)
     no_SJ_keluar = models.CharField(max_length=200,blank=True,null=True)
     id_detailSJK = models.CharField(max_length=200,blank=True,null=True)
     tujuan_kirim = models.CharField(max_length=200,blank=True,null=True)

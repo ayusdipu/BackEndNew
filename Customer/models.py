@@ -147,3 +147,11 @@ class KontrakOutletPromotion(models.Model):
     dimulai_tanggal = models.DateField(auto_now=False,blank=True,null=True) #ini adalah periode promo dimulai
     berakhir_tanggal= models.DateField(auto_now=False,blank=True,null=True) #ini adalah periode promo berakhir
     
+class Prompt(models.Model):
+    prompt_id = models.CharField(max_length=200,null=True,blank=True)
+    prompt_name = models.CharField(max_length=200,null=True,blank=True)
+    default_prompt = models.TextField(null=True, blank=True)
+    adjusted_prompt = models.TextField(null=True, blank=True)
+    prompt_description =  models.CharField(max_length=200,null=True,blank=True)
+    lokasi_prompt = models.CharField(max_length=200,null=True,blank=True)
+    timestamp = models.DateTimeField(auto_now=False,blank=True,null=True)

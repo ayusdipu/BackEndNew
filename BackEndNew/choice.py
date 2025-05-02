@@ -356,6 +356,13 @@ choice_jenis_penjualan = [
     ('Power','Power')
 ]
 
+choice_detail_lokasi = [
+    ('L1','L1'),
+    ('L2','L2'),
+    ('L3','L3')
+
+]
+
 choice_faktur = [
     ('Print Faktur','Print Faktur'),
     ('Faktur tidak Print','Faktur tidak Print'),

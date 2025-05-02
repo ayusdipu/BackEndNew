@@ -5,14 +5,15 @@ class NotaPembelianSerializer(serializers.ModelSerializer):
     class Meta:
         model = NotaPembelian
         fields = (
+            'id',
             'no_nota_beli',
-            'no_SJ_masuk',
             'supplier',
             'gudang_cabang',
             'faktur_atau_tidak',
             'hutang_standing',
             'diorder_oleh',
             'nilai_nota_beli',
+            'tanggal_nota_beli',
             'jatuh_tempo_beli',
             'status_nota_beli',
             'status_barang_beli',
@@ -27,8 +28,9 @@ class DetailPembelianSerializer(serializers.ModelSerializer):
     class Meta:
         model = DetailPembelian
         fields = (
+            'id',
+            'id_detail_nota_masuk',
             'no_nota_beli',
-            'no_SJ_masuk',
             'nama_produk',
             'kemasan_produk',
             'jumlah_order_beli',

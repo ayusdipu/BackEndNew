@@ -5,6 +5,7 @@ class ProdukSerailizer(serializers.ModelSerializer):
     class Meta:
         model = Produk
         fields = (
+            'id',
             'nama_produk',
             'alias_produk',
             'kode_produk',

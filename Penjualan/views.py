@@ -11,7 +11,7 @@ class NotaPenjualanFilter(filters.FilterSet):
     class Meta:
         model = NotaPenjualan
         fields = ['tanggal_nota','jatuh_tempo_nota','nama_outlet','no_nota_jual',
-                'no_SJ_keluar','jenis_faktur','jenis_penjualan','kantor_cabang','nama_salesman',
+                'jenis_faktur','jenis_penjualan','kantor_cabang','nama_salesman',
                 'status_nota','status_barang','divisi_kantor','perusahaan_kantor',
                 'nilai_nota_jual','piutang_standing' 
         ]
@@ -33,7 +33,7 @@ class DetailPenjualanFilter(filters.FilterSet):
     
     class Meta:
         model = DetailPenjualan
-        fields = ['no_nota_jual','no_SJ_keluar','nama_produk','kemasan_produk',
+        fields = ['no_nota_jual','nama_produk','kemasan_produk',
                 'jumlah_order','harga_jual_pcs','discount_produk','tanggal_nota'
         ]
 

@@ -5,15 +5,15 @@ class StokSerializer(serializers.ModelSerializer):
     class Meta:
         model = StokUtama
         fields = (
+            'id',
             'nama_produk',
             'kode_produk',
             'jumlah_barang',
             'gudang_cabang',
             'divisi_kantor',
+            'detail_lokasi',
             'perusahaan_kantor',
-            'opname_id',
-            'hasil_opname',
-            'nominal_selisih',
+            
             
         )
 

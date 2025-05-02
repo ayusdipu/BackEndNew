@@ -1,4 +1,5 @@
 from django.db import models
+from BackEndNew import choice as c
 
 # Create your models here.
 class StokUtama(models.Model):
@@ -7,7 +8,7 @@ class StokUtama(models.Model):
     kode_produk = models.CharField(max_length=200,blank=True,null=True)
     jumlah_barang = models.IntegerField(null=False, default=0)
     gudang_cabang = models.CharField(max_length=200,blank=True,null=True)
-    detail_lokasi = models.CharField(max_length=200,blank=True,null=True)
+    detail_lokasi = models.CharField(max_length=200,blank=True,null=True,default='Kosong',choices=c.choice_detail_lokasi)
     harga_beli_weighted = models.IntegerField(null=False, default=0)
     divisi_kantor = models.CharField(max_length=200,blank=True,null=True)
     perusahaan_kantor = models.CharField(max_length=200,blank=True,null=True)
@@ -46,6 +47,20 @@ class StokTransit(models.Model):
     divisi_kantor = models.CharField(max_length=200,blank=True,null=True)
     perusahaan_kantor = models.CharField(max_length=200,blank=True,null=True)
 
+class SelisihBongkarMuat(models.Model):
+    id_sj_transaksi = models.CharField(max_length=200,blank=True,null=True)
+    id_ks_transaksi = models.CharField(max_length=200,blank=True,null=True)
+    jenis_transaksi = models.CharField(max_length=200,blank=True,null=True)
+    nama_produk = models.CharField(max_length=200,blank=True,null=True)
+    kode_produk = models.CharField(max_length=200,blank=True,null=True)
+    jumlah_selisih = models.IntegerField(null=False, default=0)
+    timestamp = models.DateTimeField(auto_now=False,blank=True,null=True)
+    keterangan = models.CharField(max_length=200,blank=True,null=True) #Penyebab Selisih atau informasi tentang selisih
+    gudang_cabang = models.CharField(max_length=200,blank=True,null=True)
+    divisi_kantor = models.CharField(max_length=200,blank=True,null=True)
+    perusahaan_kantor = models.CharField(max_length=200,blank=True,null=True)
+    status_selisih = models.CharField(max_length=200,blank=True,null=True)#belum terselesaikan/terselesaikan
+
 class AuditStok(models.Model):
     id_audit_stok = models.CharField(max_length=200,blank=True,null=True)
     nama_produk = models.CharField(max_length=200,blank=True,null=True)
@@ -70,3 +85,6 @@ class LokasiStok(models.Model):
     gudang_cabang = models.CharField(max_length=200,blank=True,null=True)
     divisi_kantor = models.CharField(max_length=200,blank=True,null=True)
     perusahaan_kantor = models.CharField(max_length=200,blank=True,null=True)
+    #Volume Lokasi
+
+    

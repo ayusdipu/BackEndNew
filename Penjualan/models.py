@@ -6,7 +6,6 @@ class NotaPenjualan(models.Model):
     nama_outlet = models.CharField(max_length=200,blank=True,null=True)
     kode_outlet = models.CharField(max_length=200,blank=True,null=True) #kita akan pivot data konsumen menggunakan ini
     no_nota_jual = models.CharField(max_length=200,blank=True,null=True)
-    no_SJ_keluar = models.CharField(max_length=200,blank=True,null=True,default='belum ada')
     jenis_penjualan = models.CharField(max_length=200,blank=True,null=True,default='offline',choices=c.choice_jenis_penjualan) #penjualan offline/power/tokopedia/blibli/shoppee
     jenis_faktur = models.CharField(max_length=200,blank=True,null=True,default='tanpa faktur',choices=c.choice_faktur) #faktur tidak print, print faktur, online request gunggung, offline request gunggung - denda 2% 
     nilai_nota_jual = models.IntegerField(null=True,blank=True,default=0)
@@ -24,7 +23,7 @@ class NotaPenjualan(models.Model):
 
 class DetailPenjualan(models.Model):
     no_nota_jual = models.CharField(max_length=200,blank=True,null=True)
-    no_SJ_keluar = models.CharField(max_length=200,blank=True,null=True,default='belum ada')
+    id_detail_nota_jual = models.CharField(max_length=200,blank=True,null=True)
     kode_outlet = models.CharField(max_length=200,blank=True,null=True)
     nama_produk = models.CharField(max_length=200,blank=True,null=True)
     kemasan_produk = models.CharField(max_length=200,blank=True,null=True)

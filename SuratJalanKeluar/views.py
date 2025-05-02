@@ -8,7 +8,7 @@ class SJKeluarFilter(filters.FilterSet):
     timestamp = filters.DateFromToRangeFilter()
     class Meta:
         model = SJKeluar
-        fields = ['no_nota_keluar','no_SJ_keluar','no_kendaraan','nama_pengirim',
+        fields = ['id','no_nota_keluar','no_SJ_keluar','no_kendaraan','nama_pengirim',
                 'timestamp','gudang_awal','tujuan_kirim','jenis_sj_keluar','status_kiriman'
         ]
 class SJKeluarView(viewsets.ModelViewSet):
@@ -27,7 +27,7 @@ class DetailSJKeluarFilter(filters.FilterSet):
     )
     class Meta:
         model = DetailSJKeluar
-        fields = ['id_detailSJK','no_nota_keluar','no_SJ_keluar','nama_produk',
+        fields = ['id','id_detailSJK','no_nota_keluar','no_SJ_keluar','nama_produk',
                 'kode_produk','kemasan_produk','jumlah_order','harga_beli_produk'
         ]
 

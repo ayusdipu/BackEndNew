@@ -7,6 +7,7 @@ class SJKeluarSerializer(serializers.ModelSerializer):
     class Meta:
         model = SJKeluar
         fields = [
+            'id',
             'no_nota_keluar',
             'no_SJ_keluar',
             'no_kendaraan',
@@ -23,6 +24,7 @@ class DetailSJKeluarSerializer(serializers.ModelSerializer):
     class Meta:
         model = DetailSJKeluar
         fields = [
+            'id',
             'nama_produk',
             'kode_produk',
             'jumlah_order',
@@ -38,6 +40,7 @@ class DetailLokasiKeluarProdukSerializer(serializers.ModelSerializer):
     class Meta:
         model = DetailLokasiKeluarProduk
         fields = [
+            'id',
             'no_nota_keluar',
             'no_SJ_keluar',
             'kode_keluar_produk',

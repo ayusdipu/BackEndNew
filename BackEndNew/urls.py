@@ -39,6 +39,10 @@ router.register('dailyregisteredcustomer',c_views.DailyRegisteredCustomerReportV
 router.register('kontrakoutletpromotion',c_views.KontrakOutletPromotionView)
 #Driver
 router.register('driver',d_views.DriverView)
+router.register('plankiriman',d_views.PlanKirimanView)
+router.register('detailplankiriman',d_views.DetailPlanKirimanView)
+router.register('updatenotakirimsebagian',d_views.UpdateNotaKirimSebagianView)
+router.register('detailsisanotaterkirimsebagian',d_views.DetailSisaNotaTerkirimSebagianView)
 #LedgerKas
 router.register('kas',l_views.KasView)
 router.register('masterakun',l_views.MasterAkunView)

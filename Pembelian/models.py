@@ -3,7 +3,6 @@ from django.db import models
 # Create your models here.
 class NotaPembelian(models.Model):
     no_nota_beli = models.CharField(max_length=200,blank=True,null=True)
-    no_SJ_masuk = models.CharField(max_length=200,blank=True,null=True,default='belum ada')
     supplier = models.CharField(max_length=200,blank=True,null=True)
     gudang_cabang = models.CharField(max_length=200,blank=True,null=True)
     faktur_atau_tidak = models.CharField(max_length=200,blank=True,null=True)
@@ -21,7 +20,7 @@ class NotaPembelian(models.Model):
 
 class DetailPembelian(models.Model):
     no_nota_beli = models.CharField(max_length=200,blank=True,null=True)
-    no_SJ_masuk = models.CharField(max_length=200,blank=True,null=True)
+    id_detail_nota_masuk = models.CharField(max_length=200,blank=True,null=True)
     nama_produk = models.CharField(max_length=200,blank=True,null=True)
     kemasan_produk = models.CharField(max_length=200,blank=True,null=True)
     jumlah_order_beli = models.IntegerField(blank=True,null=True)

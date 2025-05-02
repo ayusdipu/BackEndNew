@@ -5,10 +5,11 @@ class NotaPenjualanSerializer(serializers.ModelSerializer):
     class Meta:
         model = NotaPenjualan
         fields = (
+            'id',
             'nama_outlet',
             'kode_outlet',
             'no_nota_jual',
-            'no_SJ_keluar',
+            
             'jenis_penjualan',
             'jenis_faktur',
             'nilai_nota_jual',
@@ -28,6 +29,7 @@ class DetailPenjualanSerializer(serializers.ModelSerializer):
     class Meta:
         model = DetailPenjualan
         fields = (
+            'id',
             'no_nota_jual',
             'nama_produk',
             'kemasan_produk',
@@ -35,7 +37,7 @@ class DetailPenjualanSerializer(serializers.ModelSerializer):
             'harga_jual_pcs',
             'discount_produk',
             'kode_outlet',
-            'no_SJ_keluar',
+            
             'subtotal_vol',
             'tanggal_nota',
         )
